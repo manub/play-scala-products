@@ -11,7 +11,6 @@ object Barcodes extends Controller {
   val imageResolution = 144
 
   def barcode(ean: Long) = Action {
-
     val mimeType = "image/png"
     try {
       val imageData = ean13BarCode(ean, mimeType)
